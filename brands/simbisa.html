@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en" class="select-none h-full bg-[#080809]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simbisa Brands - Portal | Jingle World Zimbabwe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Cormorant Garamond', 'serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              gold: {
+                50: '#fbf8eb',
+                100: '#f5edcb',
+                200: '#ecda95',
+                300: '#dfc15c',
+                400: '#d2a433',
+                500: '#c58d26',
+                600: '#aa701e',
+                700: '#88531a',
+                800: '#6d4118',
+                950: '#1b0a03',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style type="text/css">
+      .luxury-glow {
+        background: radial-gradient(circle at 50% 30%, rgba(197, 141, 38, 0.08) 0%, rgba(0, 0, 0, 0) 65%);
+      }
+      .gold-gradient-text {
+        background: linear-gradient(135deg, #FFFFFF 30%, #ecda95 65%, #c58d26 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      img, a, button {
+        -webkit-user-drag: none;
+        user-drag: none;
+      }
+    </style>
+  </head>
+  <body class="h-full bg-[#080809] text-zinc-100 flex flex-col antialiased relative overflow-x-hidden">
+
+    <!-- PROTECTIVE WATERMARK CONTROLS -->
+    <div class="pointer-events-none fixed inset-0 z-50 grid grid-cols-3 grid-rows-3 gap-4 opacity-[0.02] select-none text-[10px] font-mono tracking-widest text-[#dfc15c]">
+      <div class="flex items-center justify-center rotate-[-25deg] uppercase">simbisa protected asset</div>
+      <div class="flex items-center justify-center rotate-[-25deg] uppercase">jingle world security</div>
+      <div class="flex items-center justify-center rotate-[-25deg] uppercase">simbisa protected asset</div>
+      <div class="flex items-center justify-center rotate-[-25deg] uppercase">warstreet studios</div>
+      <div class="flex items-center justify-center rotate-[-25deg] uppercase">copy protection active</div>
+      <div class="flex items-center justify-center rotate-[-25deg] uppercase">warstreet studios</div>
+      <div class="flex items-center justify-center rotate-[-25deg] uppercase">simbisa protected asset</div>
+      <div class="flex items-center justify-center rotate-[-25deg] uppercase">jingle world security</div>
+      <div class="flex items-center justify-center rotate-[-25deg] uppercase">simbisa protected asset</div>
+    </div>
+
+    <!-- PROTECTED MEDIA BLOCKER OVERLAY -->
+    <div id="securityShield" class="fixed inset-0 bg-[#080809]/95 backdrop-blur-md z-50 flex-col items-center justify-center text-center p-6 hidden select-none transition-all duration-300">
+      <div class="w-16 h-16 rounded-full border border-gold-500/30 flex items-center justify-center bg-zinc-950 mb-6 text-gold-400">
+        <i data-lucide="shield-alert" class="w-8 h-8"></i>
+      </div>
+      <h3 class="font-display text-3xl font-medium text-gold-200 tracking-wide mb-3">
+        Protected Media Environment
+      </h3>
+      <p class="text-sm text-zinc-400 font-sans leading-relaxed max-w-md mb-8 font-light">
+        Raw audio previews are copyright protected and encrypted. Save/Download commands, right-clicks, and element inspections are disabled to protect unreleased client assets from replication.
+      </p>
+      <button onclick="dismissSecurityShield()" class="px-6 py-2.5 rounded font-mono text-xs uppercase tracking-wider bg-gold-400 text-black font-semibold hover:bg-gold-300 transition-all cursor-pointer">
+        Return to Portal
+      </button>
+    </div>
+
+    <!-- Top Glow Grid line -->
+    <div class="h-1 w-full bg-gradient-to-r from-gold-800 via-gold-400 to-gold-800 z-20"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] luxury-glow pointer-events-none z-0"></div>
+
+    <!-- Header Frame -->
+    <header class="relative z-10 border-b border-zinc-900 bg-black/40 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        
+        <!-- Back Navigation -->
+        <a href="../" class="flex items-center gap-2 group text-zinc-400 hover:text-white transition-colors font-mono text-xs uppercase tracking-widest cursor-pointer">
+          <i data-lucide="chevron-left" class="w-4 h-4 group-hover:-translate-x-1 transition-transform"></i>
+          Brand Directory
+        </a>
+
+        <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/30 border border-zinc-900">
+          <i data-lucide="award" class="text-gold-400 w-3.5 h-3.5"></i>
+          <span class="text-[10px] tracking-widest font-mono text-zinc-400 uppercase">
+            Powered by WarStreet Studios
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Portal Frame -->
+    <main class="flex-grow z-10 relative">
+      <div class="max-w-7xl mx-auto px-6 py-12 md:py-24">
+        
+        <!-- Brand Specification Frame -->
+        <div class="max-w-3xl mb-16 md:mb-20">
+          <div class="inline-flex items-center gap-4 mb-6">
+            <div class="w-16 h-16 rounded-full border-2 border-gold-500/30 flex items-center justify-center bg-zinc-950 font-display text-2xl text-gold-400">
+              S
+            </div>
+            <div>
+              <div class="text-sm font-mono tracking-[0.2em] text-gold-400 uppercase font-bold leading-none mb-1">
+                Simbisa Brands
+              </div>
+              <span class="text-xs font-mono text-zinc-500 uppercase tracking-widest">Client Audio Portal</span>
+            </div>
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-6xl font-semibold tracking-tight text-white mb-6">
+            <span class="gold-gradient-text">Simbisa Brands</span>
+          </h1>
+
+          <p class="text-zinc-400 text-base md:text-lg leading-relaxed font-light mb-8 max-w-2xl">
+            Lively acoustic audio signatures engineered for Zimbabwe's premium food brands. Designed to carry the sound of morning freshness, indulgence, and shared hot meals.
+          </p>
+
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900/50 border border-zinc-800 text-xs font-mono text-zinc-300">
+            <i data-lucide="music" class="w-3.5 h-3.5 text-gold-500"></i>
+            4 Concepts Ready for Licensing
+          </div>
+        </div>
+
+        <!-- Concept Grid: Simbisa Concepts -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl">
+          
+          <!-- CONCEPT CARD 1: Chicken Inn Moments -->
+          <div class="relative bg-[#0d0d10] border border-zinc-900 hover:border-gold-500/50 transition-all duration-500 rounded-lg p-6 md:p-8 flex flex-col justify-between overflow-hidden group">
+            
+            <audio id="audio-chicken" src="https://pub-1442ea7e40974a9684de2a30dfdc49d6.r2.dev/Chicken%20Inn%20Moments.mp3" preload="none" controlsList="nodownload"></audio>
+
+            <div class="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-gold-500/20 to-transparent"></div>
+
+            <div>
+              <div class="flex justify-between items-center mb-6">
+                <span class="text-[10px] tracking-[0.2em] uppercase font-mono font-semibold text-gold-400 bg-gold-950/40 px-3 py-1 rounded border border-gold-800/20">
+                  Brand Audio Concept
+                </span>
+                <div class="flex items-center gap-1.5 text-xs font-mono text-zinc-500">
+                  <span class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></span>
+                  PREVIEW LOCK
+                </div>
+              </div>
+
+              <h3 class="font-display text-2xl md:text-3xl font-medium tracking-tight text-white mb-3 group-hover:text-gold-200 transition-colors duration-300">
+                Chicken Inn Moments
+              </h3>
+
+              <p class="text-sm text-zinc-400 font-sans leading-relaxed mb-6 font-light">
+                An energetic, fast-paced rhythm that encapsulates the delicious craving, friendly gatherings, and family shares at Chicken Inn.
+              </p>
+
+              <!-- Media Player Frame -->
+              <div class="bg-[#08080a] border border-zinc-900 rounded-lg p-4 mb-6">
+                <div class="flex items-center gap-4">
+                  <button id="play-btn-chicken" onclick="togglePlay('chicken')" class="relative flex items-center justify-center w-12 h-12 rounded-full border border-zinc-800 text-gold-400 hover:border-gold-400 hover:bg-gold-500/5 hover:scale-105 transition-all duration-300 cursor-pointer">
+                    <i data-lucide="play" class="w-5 h-5 translate-x-[1px]" id="play-icon-chicken"></i>
+                  </button>
+                  <div class="flex-1">
+                    <div class="flex justify-between text-[11px] font-mono text-zinc-500 mb-1.5">
+                      <span id="time-chicken" class="font-medium text-zinc-400">0:00</span>
+                      <span id="duration-chicken">0:30</span>
+                    </div>
+                    <div onclick="seekAudio(event, 'chicken')" class="h-1 w-full bg-zinc-900 rounded-full overflow-hidden cursor-pointer relative progress-clickable">
+                      <div id="progress-bar-chicken" class="h-full bg-gradient-to-r from-gold-600 to-gold-400 rounded-full w-0 transition-all duration-75 relative"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Technical Specifications -->
+              <div class="grid grid-cols-3 gap-3 bg-[#0a0a0d] border border-zinc-900/50 rounded p-4 mb-6 text-center">
+                <div>
+                  <div class="text-[10px] uppercase font-mono tracking-wider text-zinc-500 mb-1">Length</div>
+                  <div class="text-xs font-mono text-zinc-350 flex items-center justify-center gap-1">
+                    0:30
+                  </div>
+                </div>
+                <div>
+                  <div class="text-[10px] uppercase font-mono tracking-wider text-zinc-500 mb-1">BPM / Tempo</div>
+                  <div class="text-xs font-mono text-zinc-350 flex items-center justify-center gap-1">
+                    120
+                  </div>
+                </div>
+                <div>
+                  <div class="text-[10px] uppercase font-mono tracking-wider text-zinc-500 mb-1">Key Harmonics</div>
+                  <div class="text-xs font-mono text-zinc-300 flex items-center justify-center gap-1">
+                    G Major
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Licensing Hand-off -->
+            <div class="border-t border-zinc-900 pt-6 mt-2">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[9px] uppercase font-mono tracking-wider text-zinc-500">Rights</span>
+                  <span class="block text-[11px] font-mono text-gold-400 font-semibold mt-0.5">EXCLUSIVE</span>
+                </div>
+                <div class="flex items-center gap-2 flex-1 max-w-[180px]">
+                  <button id="play-btn-control-chicken" onclick="togglePlay('chicken')" class="px-2 py-2 rounded text-[10px] tracking-wider font-mono uppercase font-medium bg-zinc-900 text-zinc-300 border border-[#1f1e24] hover:bg-zinc-800 transition-all text-center flex-1 cursor-pointer">
+                    Play
+                  </button>
+                  <a href="https://wa.me/263779388560?text=Hello%20Jingle%20World%20Zimbabwe.%0AI%20would%20like%20to%20purchase%3A%0AChicken%20Inn%20Moments" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded text-[10px] tracking-wider font-mono uppercase font-semibold bg-gold-400 text-black hover:bg-gold-300 transition-all text-center flex-1 inline-flex items-center justify-center gap-1">
+                    Order
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CONCEPT CARD 2: Creamy Inn -->
+          <div class="relative bg-[#0d0d10] border border-zinc-900 hover:border-gold-500/50 transition-all duration-500 rounded-lg p-6 md:p-8 flex flex-col justify-between overflow-hidden group">
+            
+            <audio id="audio-creamy" src="https://pub-1442ea7e40974a9684de2a30dfdc49d6.r2.dev/Creamy%20Inn.mp3" preload="none" controlsList="nodownload"></audio>
+
+            <div class="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-gold-500/20 to-transparent"></div>
+
+            <div>
+              <div class="flex justify-between items-center mb-6">
+                <span class="text-[10px] tracking-[0.2em] uppercase font-mono font-semibold text-gold-400 bg-gold-950/40 px-3 py-1 rounded border border-gold-800/20">
+                  Brand Audio Concept
+                </span>
+                <div class="flex items-center gap-1.5 text-xs font-mono text-zinc-500">
+                  <span class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></span>
+                  PREVIEW LOCK
+                </div>
+              </div>
+
+              <h3 class="font-display text-2xl md:text-3xl font-medium tracking-tight text-white mb-3 group-hover:text-gold-200 transition-colors duration-300">
+                Creamy Inn
+              </h3>
+
+              <p class="text-sm text-zinc-400 font-sans leading-relaxed mb-6 font-light">
+                A sweet, celebratory acoustic signature structured for parlor activations, milkshake promos, and sweet family treats.
+              </p>
+
+              <!-- Media Player Frame -->
+              <div class="bg-[#08080a] border border-zinc-900 rounded-lg p-4 mb-6">
+                <div class="flex items-center gap-4">
+                  <button id="play-btn-creamy" onclick="togglePlay('creamy')" class="relative flex items-center justify-center w-12 h-12 rounded-full border border-zinc-800 text-gold-400 hover:border-gold-400 hover:bg-gold-500/5 hover:scale-105 transition-all duration-300 cursor-pointer">
+                    <i data-lucide="play" class="w-5 h-5 translate-x-[1px]" id="play-icon-creamy"></i>
+                  </button>
+                  <div class="flex-1">
+                    <div class="flex justify-between text-[11px] font-mono text-zinc-500 mb-1.5">
+                      <span id="time-creamy" class="font-medium text-zinc-400">0:00</span>
+                      <span id="duration-creamy">0:15</span>
+                    </div>
+                    <div onclick="seekAudio(event, 'creamy')" class="h-1 w-full bg-zinc-900 rounded-full overflow-hidden cursor-pointer relative progress-clickable">
+                      <div id="progress-bar-creamy" class="h-full bg-gradient-to-r from-gold-600 to-gold-400 rounded-full w-0 transition-all duration-75 relative"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Technical Specifications -->
+              <div class="grid grid-cols-3 gap-3 bg-[#0a0a0d] border border-zinc-900/50 rounded p-4 mb-6 text-center">
+                <div>
+                  <div class="text-[10px] uppercase font-mono tracking-wider text-zinc-500 mb-1">Length</div>
+                  <div class="text-xs font-mono text-zinc-350 flex items-center justify-center gap-1">
+                    0:15
+                  </div>
+                </div>
+                <div>
+                  <div class="text-[10px] uppercase font-mono tracking-wider text-zinc-500 mb-1">BPM / Tempo</div>
+                  <div class="text-xs font-mono text-zinc-350 flex items-center justify-center gap-1">
+                    105
+                  </div>
+                </div>
+                <div>
+                  <div class="text-[10px] uppercase font-mono tracking-wider text-zinc-500 mb-1">Key Harmonics</div>
+                  <div class="text-xs font-mono text-zinc-300 flex items-center justify-center gap-1">
+                    C Major
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Licensing Hand-off -->
+            <div class="border-t border-zinc-900 pt-6 mt-2">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[9px] uppercase font-mono tracking-wider text-zinc-500">Rights</span>
+                  <span class="block text-[11px] font-mono text-gold-400 font-semibold mt-0.5">EXCLUSIVE</span>
+                </div>
+                <div class="flex items-center gap-2 flex-1 max-w-[180px]">
+                  <button id="play-btn-control-creamy" onclick="togglePlay('creamy')" class="px-2 py-2 rounded text-[10px] tracking-wider font-mono uppercase font-medium bg-zinc-900 text-zinc-300 border border-[#1f1e24] hover:bg-zinc-800 transition-all text-center flex-1 cursor-pointer">
+                    Play
+                  </button>
+                  <a href="https://wa.me/263779388560?text=Hello%20Jingle%20World%20Zimbabwe.%0AI%20would%20like%20to%20purchase%3A%0ACreamy%20Inn" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded text-[10px] tracking-wider font-mono uppercase font-semibold bg-gold-400 text-black hover:bg-gold-300 transition-all text-center flex-1 inline-flex items-center justify-center gap-1">
+                    Order
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CONCEPT CARD 3: Pizza Inn Time -->
+          <div class="relative bg-[#0d0d10] border border-zinc-900 hover:border-gold-500/50 transition-all duration-500 rounded-lg p-6 md:p-8 flex flex-col justify-between overflow-hidden group">
+            
+            <audio id="audio-pizza" src="https://pub-1442ea7e40974a9684de2a30dfdc49d6.r2.dev/Pizza%20Inn%20Time.mp3" preload="none" controlsList="nodownload"></audio>
+
+            <div class="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-gold-500/20 to-transparent"></div>
+
+            <div>
+              <div class="flex justify-between items-center mb-6">
+                <span class="text-[10px] tracking-[0.2em] uppercase font-mono font-semibold text-gold-400 bg-gold-950/40 px-3 py-1 rounded border border-gold-800/20">
+                  Brand Audio Concept
+                </span>
+                <div class="flex items-center gap-1.5 text-xs font-mono text-zinc-500">
+                  <span class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></span>
+                  PREVIEW LOCK
+                </div>
+              </div>
+
+              <h3 class="font-display text-2xl md:text-3xl font-medium tracking-tight text-white mb-3 group-hover:text-gold-200 transition-colors duration-300">
+                Pizza Inn Time
+              </h3>
+
+              <p class="text-sm text-zinc-400 font-sans leading-relaxed mb-6 font-light">
+                An organic acoustic theme tailored to highlight warmth, delicious anticipation, and shared moments over fresh wood-fired pizza.
+              </p>
+
+              <!-- Media Player Frame -->
+              <div class="bg-[#08080a] border border-zinc-900 rounded-lg p-4 mb-6">
+                <div class="flex items-center gap-4">
+                  <button id="play-btn-pizza" onclick="togglePlay('pizza')" class="relative flex items-center justify-center w-12 h-12 rounded-full border border-zinc-800 text-gold-400 hover:border-gold-400 hover:bg-gold-500/5 hover:scale-105 transition-all duration-300 cursor-pointer">
+                    <i data-lucide="play" class="w-5 h-5 translate-x-[1px]" id="play-icon-pizza"></i>
+                  </button>
+                  <div class="flex-1">
+                    <div class="flex justify-between text-[11px] font-mono text-zinc-500 mb-1.5">
+                      <span id="time-pizza" class="font-medium text-zinc-400">0:00</span>
+                      <span id="duration-pizza">0:30</span>
+                    </div>
+                    <div onclick="seekAudio(event, 'pizza')" class="h-1 w-full bg-zinc-900 rounded-full overflow-hidden cursor-pointer relative progress-clickable">
+                      <div id="progress-bar-pizza" class="h-full bg-gradient-to-r from-gold-600 to-gold-400 rounded-full w-0 transition-all duration-75 relative"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Technical Specifications -->
+              <div class="grid grid-cols-3 gap-3 bg-[#0a0a0d] border border-zinc-900/50 rounded p-4 mb-6 text-center">
+                <div>
+                  <div class="text-[10px] uppercase font-mono tracking-wider text-zinc-500 mb-1">Length</div>
+                  <div class="text-xs font-mono text-zinc-350 flex items-center justify-center gap-1">
+                    0:30
+                  </div>
+                </div>
+                <div>
+                  <div class="text-[10px] uppercase font-mono tracking-wider text-zinc-500 mb-1">BPM / Tempo</div>
+                  <div class="text-xs font-mono text-zinc-350 flex items-center justify-center gap-1">
+                    124
+                  </div>
+                </div>
+                <div>
+                  <div class="text-[10px] uppercase font-mono tracking-wider text-zinc-500 mb-1">Key Harmonics</div>
+                  <div class="text-xs font-mono text-zinc-300 flex items-center justify-center gap-1">
+                    D Major
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Licensing Hand-off -->
+            <div class="border-t border-zinc-900 pt-6 mt-2">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[9px] uppercase font-mono tracking-wider text-zinc-500">Rights</span>
+                  <span class="block text-[11px] font-mono text-gold-400 font-semibold mt-0.5">EXCLUSIVE</span>
+                </div>
+                <div class="flex items-center gap-2 flex-1 max-w-[180px]">
+                  <button id="play-btn-control-pizza" onclick="togglePlay('pizza')" class="px-2 py-2 rounded text-[10px] tracking-wider font-mono uppercase font-medium bg-zinc-900 text-zinc-300 border border-[#1f1e24] hover:bg-zinc-800 transition-all text-center flex-1 cursor-pointer">
+                    Play
+                  </button>
+                  <a href="https://wa.me/263779388560?text=Hello%20Jingle%20World%20Zimbabwe.%0AI%20would%20like%20to%20purchase%3A%0APizza%20Inn%20Time" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded text-[10px] tracking-wider font-mono uppercase font-semibold bg-gold-400 text-black hover:bg-gold-300 transition-all text-center flex-1 inline-flex items-center justify-center gap-1">
+                    Order
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CONCEPT CARD 4: Bakers Inn Morning -->
+          <div class="relative bg-[#0d0d10] border border-zinc-900 hover:border-gold-500/50 transition-all duration-500 rounded-lg p-6 md:p-8 flex flex-col justify-between overflow-hidden group">
+            
+            <audio id="audio-bakers" src="https://pub-1442ea7e40974a9684de2a30dfdc49d6.r2.dev/Bakers%20Inn%20Morning.mp3" preload="none" controlsList="nodownload"></audio>
+
+            <div class="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-gold-500/20 to-transparent"></div>
+
+            <div>
+              <div class="flex justify-between items-center mb-6">
+                <span class="text-[10px] tracking-[0.2em] uppercase font-mono font-semibold text-gold-400 bg-gold-950/40 px-3 py-1 rounded border border-gold-800/20">
+                  Brand Audio Concept
+                </span>
+                <div class="flex items-center gap-1.5 text-xs font-mono text-zinc-500">
+                  <span class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></span>
+                  PREVIEW LOCK
+                </div>
+              </div>
+
+              <h3 class="font-display text-2xl md:text-3xl font-medium tracking-tight text-white mb-3 group-hover:text-gold-200 transition-colors duration-300">
+                Bakers Inn Morning
+              </h3>
+
+              <p class="text-sm text-zinc-400 font-sans leading-relaxed mb-6 font-light">
+                A warm, acoustic acoustic layout that captures morning freshness and daily bread delivery across Zimbabwe.
+              </p>
+
+              <!-- Media Player Frame -->
+              <div class="bg-[#08080a] border border-zinc-900 rounded-lg p-4 mb-6">
+                <div class="flex items-center gap-4">
+                  <button id="play-btn-bakers" onclick="togglePlay('bakers')" class="relative flex items-center justify-center w-12 h-12 rounded-full border border-zinc-800 text-gold-400 hover:border-gold-400 hover:bg-gold-500/05 hover:scale-105 transition-all duration-300 cursor-pointer">
+                    <i data-lucide="play" class="w-5 h-5 translate-x-[1px]" id="play-icon-bakers"></i>
+                  </button>
+                  <div class="flex-1">
+                    <div class="flex justify-between text-[11px] font-mono text-zinc-500 mb-1.5">
+                      <span id="time-bakers" class="font-medium text-zinc-400">0:00</span>
+                      <span id="duration-bakers">0:30</span>
+                    </div>
+                    <div onclick="seekAudio(event, 'bakers')" class="h-1 w-full bg-zinc-900 rounded-full overflow-hidden cursor-pointer relative progress-clickable">
+                      <div id="progress-bar-bakers" class="h-full bg-gradient-to-r from-gold-600 to-gold-400 rounded-full w-0 transition-all duration-75 relative"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Technical Specifications -->
+              <div class="grid grid-cols-3 gap-3 bg-[#0a0a0d] border border-zinc-900/50 rounded p-4 mb-6 text-center">
+                <div>
+                  <div class="text-[10px] uppercase font-mono tracking-wider text-zinc-500 mb-1">Length</div>
+                  <div class="text-xs font-mono text-zinc-350 flex items-center justify-center gap-1">
+                    0:30
+                  </div>
+                </div>
+                <div>
+                  <div class="text-[10px] uppercase font-mono tracking-wider text-zinc-500 mb-1">BPM / Tempo</div>
+                  <div class="text-xs font-mono text-zinc-350 flex items-center justify-center gap-1">
+                    90
+                  </div>
+                </div>
+                <div>
+                  <div class="text-[10px] uppercase font-mono tracking-wider text-zinc-500 mb-1">Key Harmonics</div>
+                  <div class="text-xs font-mono text-zinc-300 flex items-center justify-center gap-1">
+                    E Major
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Licensing Hand-off -->
+            <div class="border-t border-zinc-900 pt-6 mt-2">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[9px] uppercase font-mono tracking-wider text-zinc-500">Rights</span>
+                  <span class="block text-[11px] font-mono text-gold-400 font-semibold mt-0.5">EXCLUSIVE</span>
+                </div>
+                <div class="flex items-center gap-2 flex-1 max-w-[180px]">
+                  <button id="play-btn-control-bakers" onclick="togglePlay('bakers')" class="px-2 py-2 rounded text-[10px] tracking-wider font-mono uppercase font-medium bg-zinc-900 text-zinc-300 border border-[#1f1e24] hover:bg-zinc-800 transition-all text-center flex-1 cursor-pointer">
+                    Play
+                  </button>
+                  <a href="https://wa.me/263779388560?text=Hello%20Jingle%20World%20Zimbabwe.%0AI%20would%20like%20to%20purchase%3A%0ABakers%20Inn%20Morning" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded text-[10px] tracking-wider font-mono uppercase font-semibold bg-gold-400 text-black hover:bg-gold-300 transition-all text-center flex-1 inline-flex items-center justify-center gap-1">
+                    Order
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- App Footer -->
+    <footer class="relative z-10 border-t border-zinc-900 bg-[#060607] py-16 text-zinc-500 text-sm">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
+          <div>
+            <div class="text-white font-semibold font-mono text-sm tracking-widest uppercase mb-1">
+              Jingle World Zimbabwe
+            </div>
+            <div class="text-[11px] font-mono text-zinc-500 uppercase tracking-widest">
+              Audio Branding Marketplace
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-mono text-zinc-500 uppercase tracking-widest">Mastered by</span>
+            <span class="text-xs font-mono text-gold-400 uppercase font-semibold tracking-widest border-b border-gold-800/40 pb-0.5">
+              WarStreet Studios
+            </span>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+          <p>© <span id="copyright-year">2026</span> Jingle World Zimbabwe. All rights reserved.</p>
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-zinc-300">Privacy Policy</a>
+            <span class="text-zinc-800">•</span>
+            <a href="#" class="hover:text-zinc-300">Licensing Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive script controls -->
+    <script>
+      lucide.createIcons();
+
+      const players = {
+        'chicken': {
+          audio: document.getElementById('audio-chicken'),
+          playBtn: document.getElementById('play-btn-chicken'),
+          playIcon: document.getElementById('play-icon-chicken'),
+          progressBar: document.getElementById('progress-bar-chicken'),
+          timeLabel: document.getElementById('time-chicken'),
+          durationLabel: document.getElementById('duration-chicken'),
+          isPlaying: false
+        },
+        'creamy': {
+          audio: document.getElementById('audio-creamy'),
+          playBtn: document.getElementById('play-btn-creamy'),
+          playIcon: document.getElementById('play-icon-creamy'),
+          progressBar: document.getElementById('progress-bar-creamy'),
+          timeLabel: document.getElementById('time-creamy'),
+          durationLabel: document.getElementById('duration-creamy'),
+          isPlaying: false
+        },
+        'pizza': {
+          audio: document.getElementById('audio-pizza'),
+          playBtn: document.getElementById('play-btn-pizza'),
+          playIcon: document.getElementById('play-icon-pizza'),
+          progressBar: document.getElementById('progress-bar-pizza'),
+          timeLabel: document.getElementById('time-pizza'),
+          durationLabel: document.getElementById('duration-pizza'),
+          isPlaying: false
+        },
+        'bakers': {
+          audio: document.getElementById('audio-bakers'),
+          playBtn: document.getElementById('play-btn-bakers'),
+          playIcon: document.getElementById('play-icon-bakers'),
+          progressBar: document.getElementById('progress-bar-bakers'),
+          timeLabel: document.getElementById('time-bakers'),
+          durationLabel: document.getElementById('duration-bakers'),
+          isPlaying: false
+        }
+      };
+
+      Object.keys(players).forEach(key => {
+        const p = players[key];
+        p.audio.addEventListener('loadedmetadata', () => {
+          p.durationLabel.textContent = formatTime(p.audio.duration);
+        });
+        p.audio.addEventListener('timeupdate', () => {
+          const current = p.audio.currentTime;
+          const total = p.audio.duration || 1;
+          p.progressBar.style.width = ((current / total) * 100) + '%';
+          p.timeLabel.textContent = formatTime(current);
+        });
+        p.audio.addEventListener('ended', () => {
+          resetPlayer(key);
+        });
+      });
+
+      function formatTime(secs) {
+        if (isNaN(secs)) return "0:00";
+        const min = Math.floor(secs / 60);
+        const second = Math.floor(secs % 60);
+        return min + ":" + (second < 10 ? '0' : '') + second;
+      }
+
+      function togglePlay(key) {
+        // Pause all other players
+        Object.keys(players).forEach(k => {
+          if (k !== key && players[k].isPlaying) {
+            players[k].audio.pause();
+            players[k].isPlaying = false;
+            updateUI(k, false);
+          }
+        });
+
+        const t = players[key];
+        if (t.isPlaying) {
+          t.audio.pause();
+          t.isPlaying = false;
+          updateUI(key, false);
+        } else {
+          t.audio.play().then(() => {
+            t.isPlaying = true;
+            updateUI(key, true);
+          }).catch(err => console.error(err));
+        }
+      }
+
+      function resetPlayer(key) {
+        const p = players[key];
+        p.isPlaying = false;
+        p.progressBar.style.width = '0%';
+        p.timeLabel.textContent = "0:00";
+        updateUI(key, false);
+      }
+
+      function updateUI(key, playing) {
+        const p = players[key];
+        const secondaryBtn = document.getElementById('play-btn-control-' + key);
+        if (playing) {
+          p.playBtn.className = "relative flex items-center justify-center w-12 h-12 rounded-full border border-gold-400 bg-gold-500 text-black hover:scale-105 transition-all duration-300 cursor-pointer";
+          p.playIcon.outerHTML = '<i data-lucide="pause" class="w-5 h-5 text-black" id="play-icon-' + key + '"></i>';
+          if (secondaryBtn) secondaryBtn.textContent = 'Pause';
+        } else {
+          p.playBtn.className = "relative flex items-center justify-center w-12 h-12 rounded-full border border-zinc-800 text-gold-400 hover:border-gold-400 hover:bg-gold-500/5 hover:scale-105 transition-all duration-300 cursor-pointer";
+          p.playIcon.outerHTML = '<i data-lucide="play" class="w-5 h-5 text-gold-400 translate-x-[1px]" id="play-icon-' + key + '"></i>';
+          if (secondaryBtn) secondaryBtn.textContent = 'Play';
+        }
+        lucide.createIcons();
+        p.playIcon = document.getElementById('play-icon-' + key);
+      }
+
+      function seekAudio(event, key) {
+        const p = players[key];
+        const rect = event.currentTarget.getBoundingClientRect();
+        const clickX = event.clientX - rect.left;
+        const percent = clickX / rect.width;
+        if (p.audio.duration) {
+          p.audio.currentTime = percent * p.audio.duration;
+          p.progressBar.style.width = (percent * 100) + '%';
+        }
+      }
+
+      /* Security shield control */
+      const securityOverlay = document.getElementById('securityShield');
+      function triggerSecurityAlert() {
+        securityOverlay.classList.remove('hidden');
+        securityOverlay.classList.add('flex');
+        Object.keys(players).forEach(k => {
+          if (players[k].isPlaying) {
+            players[k].audio.pause();
+            resetPlayer(k);
+          }
+        });
+      }
+      function dismissSecurityShield() {
+        securityOverlay.classList.remove('flex');
+        securityOverlay.classList.add('hidden');
+      }
+
+      document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        triggerSecurityAlert();
+        return false;
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'F12' || e.keyCode === 123) {
+          e.preventDefault();
+          triggerSecurityAlert();
+          return false;
+        }
+        if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'C' || e.key === 'J')) {
+          e.preventDefault();
+          triggerSecurityAlert();
+          return false;
+        }
+        if ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) {
+          e.preventDefault();
+          triggerSecurityAlert();
+          return false;
+        }
+      });
+
+      window.addEventListener('blur', () => {
+        Object.keys(players).forEach(k => {
+          if (players[k].isPlaying) {
+            players[k].audio.pause();
+            updateUI(k, false);
+          }
+        });
+      });
+
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
