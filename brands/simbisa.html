@@ -92,9 +92,9 @@
       <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
         <!-- Back Navigation -->
-        <a href="../" class="flex items-center gap-2 group text-zinc-400 hover:text-white transition-colors font-mono text-xs uppercase tracking-widest cursor-pointer">
-          <i data-lucide="chevron-left" class="w-4 h-4 group-hover:-translate-x-1 transition-transform"></i>
-          Brand Directory
+        <a id="exit-btn" href="../logout.html" class="flex items-center gap-2 group text-zinc-450 hover:text-white transition-colors font-mono text-xs uppercase tracking-widest cursor-pointer">
+          <i data-lucide="log-out" class="w-4 h-4 text-gold-500/80 group-hover:scale-105 transition-transform"></i>
+          Exit Portal Session
         </a>
 
         <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/30 border border-zinc-900">
@@ -701,6 +701,19 @@
           }
         });
       });
+
+      // Secure Session Check: Prevent direct clients from navigating back to directory
+      const ref = document.referrer;
+      const isFromMain = ref && 
+                   (ref.includes(window.location.hostname) || ref.includes('localhost') || ref.includes('.pages.dev')) && 
+                   (ref.endsWith('/') || ref.includes('index.html'));
+      const exitBtn = document.getElementById('exit-btn');
+      if (!isFromMain) {
+        sessionStorage.setItem('is_isolated_brand', 'true');
+        if (exitBtn) exitBtn.href = '../logout.html';
+      } else {
+        if (exitBtn) exitBtn.href = '../index.html';
+      }
 
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
