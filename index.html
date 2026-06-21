@@ -227,6 +227,11 @@
 
     <!-- Interactive JS Controller -->
     <script>
+      // SECURE CHECK: If an isolated brand client tries to return or access the homepage, block them!
+      if (sessionStorage.getItem('is_isolated_brand') === 'true') {
+        window.location.href = 'logout.html';
+      }
+
       // Dynamically populate client brand portal directory cards
       const container = document.getElementById('brands-container');
       if (window.BRANDS_DATA && container) {
@@ -237,7 +242,7 @@
           
           const conceptCount = brand.concepts.length;
           const conceptsText = `${conceptCount} Audio Concept${conceptCount === 1 ? '' : 's'}`;
-
+ 
           card.innerHTML = `
             <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/5 rounded-full blur-2xl group-hover:bg-gold-500/10 transition-all"></div>
             <div>

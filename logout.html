@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" class="select-none h-full bg-[#080809]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Terminated | Jingle World Zimbabwe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Cormorant Garamond', 'serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              gold: {
+                50: '#fbf8eb',
+                100: '#f5edcb',
+                200: '#ecda95',
+                300: '#dfc15c',
+                400: '#d2a433',
+                500: '#c58d26',
+                600: '#aa701e',
+                700: '#88531a',
+                800: '#6d4118',
+                950: '#1b0a03',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style type="text/css">
+      .luxury-glow {
+        background: radial-gradient(circle at 50% 50%, rgba(197, 141, 38, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+      }
+      .gold-gradient-text {
+        background: linear-gradient(135deg, #FFFFFF 30%, #ecda95 65%, #c58d26 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="h-full bg-[#080809] text-zinc-100 flex flex-col antialiased relative overflow-hidden justify-center items-center">
+
+    <!-- Top Glow Grid line -->
+    <div class="h-1 w-full absolute top-0 left-0 right-0 bg-gradient-to-r from-gold-800 via-gold-400 to-gold-800 z-20"></div>
+    <div class="absolute inset-0 luxury-glow pointer-events-none z-0"></div>
+
+    <!-- Main Message Frame -->
+    <div class="relative z-10 max-w-md w-full mx-auto px-6 text-center">
+      <div class="w-16 h-16 rounded-full border border-gold-500/20 flex items-center justify-center bg-zinc-950 mx-auto mb-8 text-gold-400/80 shadow-lg shadow-gold-500/5">
+        <i data-lucide="shield-check" class="w-7 h-7"></i>
+      </div>
+
+      <h1 class="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-3">
+        <span class="gold-gradient-text font-medium">Session Terminated</span>
+      </h1>
+      <p class="text-xs font-mono text-gold-400/60 uppercase tracking-[0.25em] mb-6">
+        Secure Exit Protocol
+      </p>
+
+      <p class="text-sm text-zinc-400 font-sans leading-relaxed mb-8 font-light">
+        You have been safely and securely logged out from your proprietary client portal. To protect unreleased audio assets, creative mixdowns, and client brand strategies, the browser session is closed.
+      </p>
+
+      <div class="bg-[#0c0c0e] border border-zinc-900 rounded-lg p-5 mb-8 text-left font-mono text-[11px] text-zinc-500 space-y-2">
+        <div class="flex justify-between border-b border-zinc-900/60 pb-2">
+          <span>SECURITY STATUS:</span>
+          <span class="text-emerald-500">PROTECTED</span>
+        </div>
+        <div class="flex justify-between border-b border-zinc-900/60 pb-2">
+          <span>PORTAL PREVIEWS:</span>
+          <span class="text-zinc-405">ENCRYPTED</span>
+        </div>
+        <div class="flex justify-between">
+          <span>SESSION LOGS:</span>
+          <span class="text-zinc-405">CLEARED</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-3">
+        <button onclick="window.close()" class="px-6 py-3.5 rounded font-mono text-xs uppercase tracking-wider bg-gold-500 text-black font-semibold hover:bg-gold-400 transition-all cursor-pointer">
+          Close Window
+        </button>
+        <span class="text-[10px] text-zinc-650 font-mono uppercase tracking-widest mt-2">
+          Or close your browser tab manually
+        </span>
+      </div>
+    </div>
+
+    <!-- App Footer -->
+    <footer class="absolute bottom-8 left-0 right-0 text-center text-zinc-600 text-[10px] font-mono tracking-widest uppercase">
+      Jingle World Zimbabwe • WarStreet Studios
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
